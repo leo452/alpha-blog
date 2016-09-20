@@ -21,6 +21,9 @@
 </p>
 
 <tr>
+    
    <td> <%= link_to 'back to the articles listing',articles_path %></td>
+    <% if logged_in? && @article.user == current_user%>
    <td> <%= link_to 'edit',edit_article_path(@article) %></td>
+   <% end %>
 </tr>
